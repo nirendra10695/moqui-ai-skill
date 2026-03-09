@@ -172,6 +172,8 @@ ec.web         // WebFacade - servlet request/response (web context only)
 
 4. **Check attribute names and types** — Use exact attribute names from the XSD (e.g., `entity-name` not `entityName`, `field-name` not `fieldName`, `join-from-alias` not `joinFromAlias`). Moqui XML uses kebab-case for attributes.
 
+5. **Escape XML special characters in text/attributes** — Always escape `&` as `&amp;` (for example `J&amp;T`), and use standard XML escaping rules for special characters in attribute values and text nodes.
+
 ---
 
 ## Entity Development (mantle-udm patterns)
